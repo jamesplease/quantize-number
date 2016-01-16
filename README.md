@@ -61,6 +61,19 @@ environments, including ES2015, CommonJS, AMD, and also browser globals.
 - `options`: There's currently only one option, `cover`, which accepts a Boolean
   value. This determines whether the algorithm is covering or fitting (see below).
 
+### Examples
+
+```js
+quantizeNumber(9, 3) === 9;
+
+quantizeNumber(10, 4) === 8;
+quantizeNumber(10, 4, {
+  cover: true
+}) === 12;
+
+quantizeNumber(-77, 25) === -75;
+```
+
 ### Covering vs. Fitting
 
 The idea of covering vs. fitting is important to this library. Consider quantizing
