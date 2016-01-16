@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["quantizeValue"] = factory();
+		exports["quantizeNumber"] = factory();
 	else
-		root["quantizeValue"] = factory();
+		root["quantizeNumber"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -66,13 +66,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	// These examples may help demonstrate the difference between that option:
 	//
-	// quantizeValue(7, 5, {cover: false}) === 5
-	// quantizeValue(7, 5, {cover: true}) === 10
+	// quantizeNumber(7, 5, {cover: false}) === 5
+	// quantizeNumber(7, 5, {cover: true}) === 10
 	//
 	// The algorithm is symmetrical about zero, so you can just make every
 	// number in the above example negative to see how it behaves when negative
 	// numbers are presented.
-	function quantizeValue(val, quantum) {
+	function quantizeNumber(val, quantum) {
 	  var _ref = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
 	
 	  var _ref$cover = _ref.cover;
@@ -82,15 +82,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return 0;
 	  }
 	  var remainder = val % quantum;
+	  // I'm intentionally not using Math.sign so that no polyfill is
+	  // required to use this library in legacy environments.
 	  var sign = val >= 0 ? 1 : -1;
 	  var mod = cover && remainder ? quantum : 0;
 	  return val - remainder + sign * mod;
 	};
 	
-	exports.default = quantizeValue;
+	exports.default = quantizeNumber;
 
 /***/ }
 /******/ ])
 });
 ;
-//# sourceMappingURL=quantize-value.js.map
+//# sourceMappingURL=quantize-number.js.map

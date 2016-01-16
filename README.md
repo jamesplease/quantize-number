@@ -1,12 +1,12 @@
-# quantize-value
+# quantize-number
 
 Quantize a number
 
-[![Travis build status](http://img.shields.io/travis/jmeas/quantize-value.svg?style=flat)](https://travis-ci.org/jmeas/quantize-value)
-[![Code Climate](https://codeclimate.com/github/jmeas/quantize-value/badges/gpa.svg)](https://codeclimate.com/github/jmeas/quantize-value)
-[![Test Coverage](https://codeclimate.com/github/jmeas/quantize-value/badges/coverage.svg)](https://codeclimate.com/github/jmeas/quantize-value)
-[![Dependency Status](https://david-dm.org/jmeas/quantize-value.svg)](https://david-dm.org/jmeas/quantize-value)
-[![devDependency Status](https://david-dm.org/jmeas/quantize-value/dev-status.svg)](https://david-dm.org/jmeas/quantize-value#info=devDependencies)
+[![Travis build status](http://img.shields.io/travis/jmeas/quantize-number.svg?style=flat)](https://travis-ci.org/jmeas/quantize-number)
+[![Code Climate](https://codeclimate.com/github/jmeas/quantize-number/badges/gpa.svg)](https://codeclimate.com/github/jmeas/quantize-number)
+[![Test Coverage](https://codeclimate.com/github/jmeas/quantize-number/badges/coverage.svg)](https://codeclimate.com/github/jmeas/quantize-number)
+[![Dependency Status](https://david-dm.org/jmeas/quantize-number.svg)](https://david-dm.org/jmeas/quantize-number)
+[![devDependency Status](https://david-dm.org/jmeas/quantize-number/dev-status.svg)](https://david-dm.org/jmeas/quantize-number#info=devDependencies)
 
 ### About
 
@@ -36,17 +36,17 @@ requires that the discrete set of numbers have even spacing between them.
 The easiest way to install this library is through npm.
 
 ```sh
-npm install quantize-value
+npm install quantize-number
 ```
 
 Then, import or require it into your library.
 
 ```js
 // ES2015 syntax
-import quantizeValue from 'quantize-value';
+import quantizeNumber from 'quantize-number';
 
 // CJS syntax
-var quantizeValue = require('quantize-value');
+var quantizeNumber = require('quantize-number');
 ```
 
 This library exports UMD, so it works in the most popular JavaScript module
@@ -54,7 +54,7 @@ environments, including ES2015, CommonJS, AMD, and also browser globals.
 
 ### Usage
 
-##### `quantizeValue( val, quantum [, options] )`
+##### `quantizeNumber( val, quantum [, options] )`
 
 - `val`: The number to be quantized
 - `quantum`: The gap between the discrete set numbers

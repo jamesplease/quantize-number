@@ -5,13 +5,13 @@
 //
 // These examples may help demonstrate the difference between that option:
 //
-// quantizeValue(7, 5, {cover: false}) === 5
-// quantizeValue(7, 5, {cover: true}) === 10
+// quantizeNumber(7, 5, {cover: false}) === 5
+// quantizeNumber(7, 5, {cover: true}) === 10
 //
 // The algorithm is symmetrical about zero, so you can just make every
 // number in the above example negative to see how it behaves when negative
 // numbers are presented.
-function quantizeValue(val, quantum, {cover = false} = {}) {
+function quantizeNumber(val, quantum, {cover = false} = {}) {
   if (!quantum) { return 0; }
   var remainder = val % quantum;
   // I'm intentionally not using Math.sign so that no polyfill is
@@ -21,4 +21,4 @@ function quantizeValue(val, quantum, {cover = false} = {}) {
   return val - remainder + sign * mod;
 };
 
-export default quantizeValue;
+export default quantizeNumber;
