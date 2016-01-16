@@ -14,6 +14,8 @@
 function quantizeValue(val, quantum, {cover = false} = {}) {
   if (!quantum) { return 0; }
   var remainder = val % quantum;
+  // I'm intentionally not using Math.sign so that no polyfill is
+  // required to use this library in legacy environments.
   var sign = val >= 0 ? 1 : -1;
   var mod = cover && remainder ? quantum : 0;
   return val - remainder + sign * mod;
