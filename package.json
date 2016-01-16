@@ -1,6 +1,6 @@
 {
   "name": "quantize-number",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Quantize a number",
   "main": "dist/quantize-number.js",
   "scripts": {
